@@ -1,0 +1,288 @@
+{
+  "tool": {
+    "id": "ich-score",
+    "title": "ICH Score",
+    "short": "Mortalidade em 30 dias na hemorragia intracerebral",
+    "spec": [
+      "neurologia",
+      "neurocirurgia",
+      "medicina-intensiva",
+      "medicina-de-emergencia"
+    ],
+    "desc": "Calculadora do ICH Score de Hemphill: mortalidade em 30 dias da hemorragia intracerebral espontânea por Glasgow, volume, inundação ventricular, local e idade.",
+    "lead": "Estima a mortalidade em 30 dias da hemorragia intracerebral espontânea com dados da admissão (Glasgow e tomografia).",
+    "fields": [
+      [
+        "gcs",
+        "Escala de coma de Glasgow",
+        "radio",
+        {
+          "opts": {
+            "0": "13 a 15",
+            "1": "5 a 12",
+            "2": "3 a 4"
+          }
+        }
+      ],
+      [
+        "vol",
+        "Volume do hematoma ≥ 30 mL (fórmula ABC/2)",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "ivh",
+        "Inundação ventricular",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "infra",
+        "Origem infratentorial",
+        "chk",
+        {
+          "pts": 1
+        }
+      ],
+      [
+        "idade",
+        "Idade ≥ 80 anos",
+        "chk",
+        {
+          "pts": 1
+        }
+      ]
+    ],
+    "score": {
+      "label": "ICH Score",
+      "unit": "de 6",
+      "bands": [
+        [
+          0,
+          "low",
+          "Mortalidade em 30 dias: 0%",
+          ""
+        ],
+        [
+          1,
+          "mid",
+          "Mortalidade em 30 dias: 13%",
+          ""
+        ],
+        [
+          2,
+          "mid",
+          "Mortalidade em 30 dias: 26%",
+          ""
+        ],
+        [
+          3,
+          "high",
+          "Mortalidade em 30 dias: 72%",
+          ""
+        ],
+        [
+          4,
+          "high",
+          "Mortalidade em 30 dias: 97%",
+          ""
+        ],
+        [
+          5,
+          "high",
+          "Mortalidade em 30 dias: 100%",
+          "Nenhum paciente da coorte original teve 6 pontos (mortalidade estimada de 100%)."
+        ]
+      ]
+    },
+    "formula": "<p>Glasgow 3 a 4 = 2 · 5 a 12 = 1 · 13 a 15 = 0; volume ≥ 30 mL = 1; inundação ventricular = 1; origem infratentorial = 1; idade ≥ 80 anos = 1. Total: 0 a 6.</p><p>Volume pela fórmula <strong>ABC/2</strong>: A = maior diâmetro do hematoma no corte de maior área; B = diâmetro perpendicular a A; C = número de cortes com hematoma × espessura do corte (em cm). Resultado em mL.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Mortalidade em 30 dias"
+      ],
+      [
+        "0",
+        "0%"
+      ],
+      [
+        "1",
+        "13%"
+      ],
+      [
+        "2",
+        "26%"
+      ],
+      [
+        "3",
+        "72%"
+      ],
+      [
+        "4",
+        "97%"
+      ],
+      [
+        "5",
+        "100%"
+      ],
+      [
+        "6",
+        "100% (estimada)"
+      ]
+    ],
+    "table_note": "Coorte de derivação de Hemphill 2001 (152 pacientes).",
+    "tips": [
+      "O ICH Score serve para comunicar gravidade e estratificar, <strong>não</strong> para limitar o suporte: ordens de não reanimar precoces aumentam a mortalidade (profecia autorrealizável).",
+      "As diretrizes recomendam cuidado pleno nas primeiras 24 h, na maioria dos casos, antes de discutir limitação terapêutica.",
+      "Use o Glasgow após a reanimação inicial e sem efeito de sedativos; na cabeceira, o volume pode ser estimado pelo ABC/2.",
+      "O escore não se aplica a hemorragias secundárias (malformação, tumor, trauma, transformação hemorrágica de infarto)."
+    ],
+    "sources": [
+      [
+        "Hemphill JC 3rd et al. The ICH score: a simple, reliable grading scale for intracerebral hemorrhage. Stroke, 2001.",
+        "https://doi.org/10.1161/01.STR.32.4.891"
+      ]
+    ],
+    "cases": [
+      [
+        "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        {
+          "gcs": "0"
+        },
+        {
+          "score": 0,
+          "level": "low"
+        }
+      ],
+      [
+        "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        {
+          "gcs": "1",
+          "ivh": true
+        },
+        {
+          "score": 2,
+          "level": "mid",
+          "verdict": "26%"
+        }
+      ],
+      [
+        "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        {
+          "gcs": "2",
+          "vol": true,
+          "ivh": true
+        },
+        {
+          "score": 4,
+          "level": "high",
+          "verdict": "97%"
+        }
+      ]
+    ],
+    "batch": "neuro-mente",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 6",
+      "label": "ICH Score",
+      "fields": [
+        [
+          "gcs",
+          "radio",
+          0
+        ],
+        [
+          "vol",
+          "chk",
+          1
+        ],
+        [
+          "ivh",
+          "chk",
+          1
+        ],
+        [
+          "infra",
+          "chk",
+          1
+        ],
+        [
+          "idade",
+          "chk",
+          1
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Mortalidade em 30 dias: 0%",
+          ""
+        ],
+        [
+          1,
+          "mid",
+          "Mortalidade em 30 dias: 13%",
+          ""
+        ],
+        [
+          2,
+          "mid",
+          "Mortalidade em 30 dias: 26%",
+          ""
+        ],
+        [
+          3,
+          "high",
+          "Mortalidade em 30 dias: 72%",
+          ""
+        ],
+        [
+          4,
+          "high",
+          "Mortalidade em 30 dias: 97%",
+          ""
+        ],
+        [
+          5,
+          "high",
+          "Mortalidade em 30 dias: 100%",
+          "Nenhum paciente da coorte original teve 6 pontos (mortalidade estimada de 100%)."
+        ]
+      ]
+    },
+    "areaId": "neuro-mente",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/neuro-mente.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/neuro-mente.php",
+    "sha256": "3ce3a7987a3ec63938e5f21d8d24ec7f7f8880c1b54458ef7046807a89221cac",
+    "bytes": 102818
+  },
+  "clinicalValidation": "not-performed"
+}

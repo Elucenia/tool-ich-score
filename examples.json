@@ -1,0 +1,52 @@
+[
+  {
+    "label": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+    "input": {
+      "gcs": "0"
+    },
+    "expected": {
+      "score": 0,
+      "level": "low"
+    },
+    "originalInput": {
+      "gcs": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+    "input": {
+      "gcs": "1",
+      "ivh": true
+    },
+    "expected": {
+      "score": 2,
+      "level": "mid",
+      "verdict": "26%"
+    },
+    "originalInput": {
+      "gcs": "1",
+      "ivh": true
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+    "input": {
+      "gcs": "2",
+      "vol": true,
+      "ivh": true
+    },
+    "expected": {
+      "score": 4,
+      "level": "high",
+      "verdict": "97%"
+    },
+    "originalInput": {
+      "gcs": "2",
+      "vol": true,
+      "ivh": true
+    },
+    "expandedZeroOptions": []
+  }
+]
