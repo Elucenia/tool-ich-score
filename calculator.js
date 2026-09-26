@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-ich-score · Elucenia · https://github.com/Elucenia/tool-ich-score
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"ich-score","title":"ICH Score","fields":[["gcs","Escala de coma de Glasgow","radio",{"opts":{"0":"13 a 15","1":"5 a 12","2":"3 a 4"}}],["vol","Volume do hematoma ≥ 30 mL (fórmula ABC/2)","chk",{"pts":1}],["ivh","Inundação ventricular","chk",{"pts":1}],["infra","Origem infratentorial","chk",{"pts":1}],["idade","Idade ≥ 80 anos","chk",{"pts":1}]],"config":{"unit":"de 6","label":"ICH Score","fields":[["gcs","radio",0],["vol","chk",1],["ivh","chk",1],["infra","chk",1],["idade","chk",1]],"bands":[[0,"low","Mortalidade em 30 dias: 0%",""],[1,"mid","Mortalidade em 30 dias: 13%",""],[2,"mid","Mortalidade em 30 dias: 26%",""],[3,"high","Mortalidade em 30 dias: 72%",""],[4,"high","Mortalidade em 30 dias: 97%",""],[5,"high","Mortalidade em 30 dias: 100%","Nenhum paciente da coorte original teve 6 pontos (mortalidade estimada de 100%)."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
