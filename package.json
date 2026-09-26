@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-ich-score",
   "version": "0.1.0",
-  "description": "ICH Score · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "ICH Score · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
