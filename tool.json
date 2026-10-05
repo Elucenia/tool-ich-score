@@ -3,14 +3,15 @@
     "id": "ich-score",
     "title": "ICH Score",
     "short": "Mortalidade em 30 dias na hemorragia intracerebral",
+    "desc": "Calculadora do ICH Score de Hemphill: mortalidade em 30 dias da hemorragia intracerebral espontânea por Glasgow, volume, inundação ventricular, local e idade.",
+    "lead": "Estima a mortalidade em 30 dias da hemorragia intracerebral espontânea com dados da admissão (Glasgow e tomografia).",
+    "kind": "Escore",
     "spec": [
       "neurologia",
       "neurocirurgia",
       "medicina-intensiva",
       "medicina-de-emergencia"
     ],
-    "desc": "Calculadora do ICH Score de Hemphill: mortalidade em 30 dias da hemorragia intracerebral espontânea por Glasgow, volume, inundação ventricular, local e idade.",
-    "lead": "Estima a mortalidade em 30 dias da hemorragia intracerebral espontânea com dados da admissão (Glasgow e tomografia).",
     "fields": [
       [
         "gcs",
@@ -28,119 +29,28 @@
         "vol",
         "Volume do hematoma ≥ 30 mL (fórmula ABC/2)",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "ivh",
         "Inundação ventricular",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "infra",
         "Origem infratentorial",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "idade",
         "Idade ≥ 80 anos",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ]
     ],
-    "score": {
-      "label": "ICH Score",
-      "unit": "de 6",
-      "bands": [
-        [
-          0,
-          "low",
-          "Mortalidade em 30 dias: 0%",
-          ""
-        ],
-        [
-          1,
-          "mid",
-          "Mortalidade em 30 dias: 13%",
-          ""
-        ],
-        [
-          2,
-          "mid",
-          "Mortalidade em 30 dias: 26%",
-          ""
-        ],
-        [
-          3,
-          "high",
-          "Mortalidade em 30 dias: 72%",
-          ""
-        ],
-        [
-          4,
-          "high",
-          "Mortalidade em 30 dias: 97%",
-          ""
-        ],
-        [
-          5,
-          "high",
-          "Mortalidade em 30 dias: 100%",
-          "Nenhum paciente da coorte original teve 6 pontos (mortalidade estimada de 100%)."
-        ]
-      ]
-    },
     "formula": "<p>Glasgow 3 a 4 = 2 · 5 a 12 = 1 · 13 a 15 = 0; volume ≥ 30 mL = 1; inundação ventricular = 1; origem infratentorial = 1; idade ≥ 80 anos = 1. Total: 0 a 6.</p><p>Volume pela fórmula <strong>ABC/2</strong>: A = maior diâmetro do hematoma no corte de maior área; B = diâmetro perpendicular a A; C = número de cortes com hematoma × espessura do corte (em cm). Resultado em mL.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Mortalidade em 30 dias"
-      ],
-      [
-        "0",
-        "0%"
-      ],
-      [
-        "1",
-        "13%"
-      ],
-      [
-        "2",
-        "26%"
-      ],
-      [
-        "3",
-        "72%"
-      ],
-      [
-        "4",
-        "97%"
-      ],
-      [
-        "5",
-        "100%"
-      ],
-      [
-        "6",
-        "100% (estimada)"
-      ]
-    ],
-    "table_note": "Coorte de derivação de Hemphill 2001 (152 pacientes).",
-    "tips": [
-      "O ICH Score serve para comunicar gravidade e estratificar, <strong>não</strong> para limitar o suporte: ordens de não reanimar precoces aumentam a mortalidade (profecia autorrealizável).",
-      "As diretrizes recomendam cuidado pleno nas primeiras 24 h, na maioria dos casos, antes de discutir limitação terapêutica.",
-      "Use o Glasgow após a reanimação inicial e sem efeito de sedativos; na cabeceira, o volume pode ser estimado pelo ABC/2.",
-      "O escore não se aplica a hemorragias secundárias (malformação, tumor, trauma, transformação hemorrágica de infarto)."
-    ],
     "sources": [
       [
         "Hemphill JC 3rd et al. The ICH score: a simple, reliable grading scale for intracerebral hemorrhage. Stroke, 2001.",
@@ -184,77 +94,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 6",
-      "label": "ICH Score",
-      "fields": [
-        [
-          "gcs",
-          "radio",
-          0
-        ],
-        [
-          "vol",
-          "chk",
-          1
-        ],
-        [
-          "ivh",
-          "chk",
-          1
-        ],
-        [
-          "infra",
-          "chk",
-          1
-        ],
-        [
-          "idade",
-          "chk",
-          1
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Mortalidade em 30 dias: 0%",
-          ""
-        ],
-        [
-          1,
-          "mid",
-          "Mortalidade em 30 dias: 13%",
-          ""
-        ],
-        [
-          2,
-          "mid",
-          "Mortalidade em 30 dias: 26%",
-          ""
-        ],
-        [
-          3,
-          "high",
-          "Mortalidade em 30 dias: 72%",
-          ""
-        ],
-        [
-          4,
-          "high",
-          "Mortalidade em 30 dias: 97%",
-          ""
-        ],
-        [
-          5,
-          "high",
-          "Mortalidade em 30 dias: 100%",
-          "Nenhum paciente da coorte original teve 6 pontos (mortalidade estimada de 100%)."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -263,17 +102,441 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T17:23:41.452Z",
+      "total": 48,
+      "passed": 48,
+      "sourceRowCount": 48,
+      "uniqueApiInputCount": 48,
+      "sourceContextCount": 48,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "5084217e0bd36785164cc929e272c31160c8889bf19656e59aa155e1d7b86981",
+        "total": 48,
+        "bankRowCount": 48,
+        "uniqueApiInputCount": 48,
+        "sourceContextCount": 48,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+            "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+          },
+          {
+            "file": "reports/review-20261003/eight-organ-functional-independent-expectations-final26.json",
+            "sha256": "441cc3061db085da51adbe70aea27a87b1a0266488513a4942d3a9abd9f5a766"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+          "sha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80"
+        },
+        "packagingRequirement": "Compose reviewed source/label hashes plus metadata and freeze26 before package generation."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 48,
+        "uniqueApiInputs": 48,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+          "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+        }
+      },
+      "scope": "Exact integer weighted sum of 48 stored selected category/flag tuples for ich-score. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+      "sources": [
+        {
+          "id": "ich-score",
+          "declaredEdition": "Hemphill2001",
+          "numericEvidenceEdition": "Original2001 abstract explicitly lists all point weights and categories",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11283388/",
+          "doi": "10.1161/01.STR.32.4.891",
+          "access": "OriginalPubMed abstract directly opened/read. Original publisherPDF403; no fullpaper or original table image claimed.",
+          "readScope": [
+            "Originalabstract Methods/Results and point assignments"
+          ],
+          "notVerified": [
+            "Originalfulltable, exact volumeABC/2 measurement implementation",
+            "Mortalitylookup including unobservedscore6, individual prognosis or treatment"
+          ],
+          "sourceComponent": "Selected point total; SOFA additional six representative/unambiguous component outputs only",
+          "sourceFindings": []
+        }
+      ],
+      "evidencePath": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+      "evidenceSha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80",
+      "originalEvidence": {
+        "file": "reports/review-20261003/eight-organ-functional-independent-source-check-final26.json",
+        "sha256": "591c331b87a338053921efb483bd7e23b1741285439c4bbce0e3e6fd4918f751"
+      },
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned.",
+        "recordedAt": "2026-10-04T18:58:11.034Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned."
+        },
+        "peer": {
+          "file": "reports/review-20261003/eight-organ-source-banks-root-peer-final26.json",
+          "sha256": "411b6e23e0dd3262149ce637566e50c3ba61f424bb997164c25c1862c3f603d0",
+          "summary": {
+            "checks": 55762,
+            "failed": 0,
+            "helperAssertions": 50346,
+            "sourceRows": 6947,
+            "uniqueInputObjects": 6947,
+            "freshNodeExecutions": 20841,
+            "methods": 137,
+            "allSourceRows": 60865,
+            "allUniqueInputs": 60792,
+            "allDuplicateRows": 73
+          },
+          "scope": "Root peer of46exact preimages,6947 independently frozen source input/expected objects and explicit seven-method additive crosscheck; SOFA six frozen source component scores and total only. Root replays fresh3public adapters. Excludes clinical rubrics, ambiguous table equalities, NIHSS UN, Barthel mobility/enema wording and patient risk/diagnosis. Exact helper reverse restores all27 prior scopes; realm normalization preserves exact ordered key identities."
+        },
+        "application": {
+          "file": "reports/review-20261003/eight-organ-source-evidence-application-final26.json",
+          "sha256": "4460d9fa07f83af63211052014fa73f12bfb1a3aed0e0bff076925f16b77682b"
+        },
+        "reviewedBankScope": "Exact integer weighted sum of 48 stored selected category/flag tuples for ich-score. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+        "currentBinding": {
+          "source26BankSha256": "cf995f8f1e184d4ea2025018d7d1004740d4031eb1853337eaab92e3575dcd4f",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/ich-score/calculator.js",
+              "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/ich-score/calculator.js",
+              "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/ich-score/calculator.js",
+              "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+            }
+          ],
+          "subsequentReviewedRebinds": []
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 144,
+      "actualVmExecutions": 144,
+      "implementations": [
+        {
+          "app": "website",
+          "id": "ich-score",
+          "file": "apps/website/private/tool-code/ich-score/calculator.js",
+          "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+        },
+        {
+          "app": "dashboard",
+          "id": "ich-score",
+          "file": "apps/dashboard/private/tool-code/ich-score/calculator.js",
+          "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+        },
+        {
+          "app": "command-center",
+          "id": "ich-score",
+          "file": "apps/command-center/private/tool-code/ich-score/calculator.js",
+          "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+        }
+      ],
+      "qualifications": [
+        "Exact integer weighted sum of 48 stored selected category/flag tuples for ich-score. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+        "NIHSS UN handling, GBS exact25 lab boundary, SOFA source boundaries/dose rubrics, Barthel yard/meter and enema rubrics, Katz original1963A–G and clinical grades/probabilities are not approved by score tests. Separately owned field/source-edition patches must be reviewed and composed.",
+        "All862 historical fixtures and their tolerances remain byte-identical. Four inline samples are only a subset of this complete hashed bank.",
+        "Synthetic selected-category combinations may not be clinically admissible patient assessments. No professional/clinical/rights/full-method approval inferred."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "ICH/Hemphill 2001:5 fatores, total 0–6; volume ABC/2; sem decisão terapêutica automática",
+    "implementationVersion": "ich-score@native-2026-10-03+0097007cc91e",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/11283388/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Glasgow 3 a 4 = 2 · 5 a 12 = 1 · 13 a 15 = 0; volume ≥ 30 mL = 1; inundação ventricular = 1; origem infratentorial = 1; idade ≥ 80 anos = 1. Total: 0 a 6. Volume pela fórmula ABC/2 : A = maior diâmetro do hematoma no corte de maior área; B = diâmetro perpendicular a A; C = número de cortes com hematoma × espessura do corte (em cm). Resultado em mL.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "gcs",
+            "label": "Escala de coma de Glasgow",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "13 a 15",
+              "1": "5 a 12",
+              "2": "3 a 4"
+            }
+          },
+          {
+            "key": "vol",
+            "label": "Volume do hematoma ≥ 30 mL (fórmula ABC/2)",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "ivh",
+            "label": "Inundação ventricular",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "infra",
+            "label": "Origem infratentorial",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "idade",
+            "label": "Idade ≥ 80 anos",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "9210e09231e5ed20f3df4257683384ac70c59a5b5f2b6b18c481007facca1a04"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Hemphill JC 3rd et al. The ICH score: a simple, reliable grading scale for intracerebral hemorrhage. Stroke, 2001.",
+          "url": "https://doi.org/10.1161/01.STR.32.4.891",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The ICH score: a simple, reliable grading scale for intracerebral hemorrhage.",
+            "year": "2001",
+            "firstPublicationDate": "2001-04-01",
+            "doi": "10.1161/01.str.32.4.891",
+            "pmid": "11283388",
+            "journal": "Stroke",
+            "authors": "Hemphill JC, Bonovich DC, Besmertis L, Manley GT, Johnston SC."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/11283388/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "eeb08d3b1a3e068ede049e27b48cd323ca135bce9c8823bbfad2a434161be911",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T17:23:41.452Z",
+        "total": 48,
+        "passed": 48,
+        "sourceRowCount": 48,
+        "uniqueApiInputCount": 48,
+        "sourceContextCount": 48,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "5084217e0bd36785164cc929e272c31160c8889bf19656e59aa155e1d7b86981",
+          "total": 48,
+          "bankRowCount": 48,
+          "uniqueApiInputCount": 48,
+          "sourceContextCount": 48,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+              "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+            },
+            {
+              "file": "reports/review-20261003/eight-organ-functional-independent-expectations-final26.json",
+              "sha256": "441cc3061db085da51adbe70aea27a87b1a0266488513a4942d3a9abd9f5a766"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+            "sha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80"
+          },
+          "packagingRequirement": "Compose reviewed source/label hashes plus metadata and freeze26 before package generation."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 48,
+          "uniqueApiInputs": 48,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/eight-organ-publication-independent-expectations-final26.json",
+            "sha256": "5b80f57281b79c15458b473abed56f641541206eb50de44726b2a078072b1288"
+          }
+        },
+        "scope": "Exact integer weighted sum of 48 stored selected category/flag tuples for ich-score. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+        "sources": [
+          {
+            "id": "ich-score",
+            "declaredEdition": "Hemphill2001",
+            "numericEvidenceEdition": "Original2001 abstract explicitly lists all point weights and categories",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/11283388/",
+            "doi": "10.1161/01.STR.32.4.891",
+            "access": "OriginalPubMed abstract directly opened/read. Original publisherPDF403; no fullpaper or original table image claimed.",
+            "readScope": [
+              "Originalabstract Methods/Results and point assignments"
+            ],
+            "notVerified": [
+              "Originalfulltable, exact volumeABC/2 measurement implementation",
+              "Mortalitylookup including unobservedscore6, individual prognosis or treatment"
+            ],
+            "sourceComponent": "Selected point total; SOFA additional six representative/unambiguous component outputs only",
+            "sourceFindings": []
+          }
+        ],
+        "evidencePath": "reports/review-20261003/eight-organ-source-bank-independent-check-final26.json",
+        "evidenceSha256": "def1101195ee4fab702761b71118d0da1fb7a7cbbb97ad9dbcf71c694bfaea80",
+        "originalEvidence": {
+          "file": "reports/review-20261003/eight-organ-functional-independent-source-check-final26.json",
+          "sha256": "591c331b87a338053921efb483bd7e23b1741285439c4bbce0e3e6fd4918f751"
+        },
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned.",
+          "recordedAt": "2026-10-04T18:58:11.034Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Independent bank/metadata/helper review; source label/version/UN/distance patches are separately owned."
+          },
+          "peer": {
+            "file": "reports/review-20261003/eight-organ-source-banks-root-peer-final26.json",
+            "sha256": "411b6e23e0dd3262149ce637566e50c3ba61f424bb997164c25c1862c3f603d0",
+            "summary": {
+              "checks": 55762,
+              "failed": 0,
+              "helperAssertions": 50346,
+              "sourceRows": 6947,
+              "uniqueInputObjects": 6947,
+              "freshNodeExecutions": 20841,
+              "methods": 137,
+              "allSourceRows": 60865,
+              "allUniqueInputs": 60792,
+              "allDuplicateRows": 73
+            },
+            "scope": "Root peer of46exact preimages,6947 independently frozen source input/expected objects and explicit seven-method additive crosscheck; SOFA six frozen source component scores and total only. Root replays fresh3public adapters. Excludes clinical rubrics, ambiguous table equalities, NIHSS UN, Barthel mobility/enema wording and patient risk/diagnosis. Exact helper reverse restores all27 prior scopes; realm normalization preserves exact ordered key identities."
+          },
+          "application": {
+            "file": "reports/review-20261003/eight-organ-source-evidence-application-final26.json",
+            "sha256": "4460d9fa07f83af63211052014fa73f12bfb1a3aed0e0bff076925f16b77682b"
+          },
+          "reviewedBankScope": "Exact integer weighted sum of 48 stored selected category/flag tuples for ich-score. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+          "currentBinding": {
+            "source26BankSha256": "cf995f8f1e184d4ea2025018d7d1004740d4031eb1853337eaab92e3575dcd4f",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/ich-score/calculator.js",
+                "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/ich-score/calculator.js",
+                "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/ich-score/calculator.js",
+                "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+              }
+            ],
+            "subsequentReviewedRebinds": []
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 144,
+        "actualVmExecutions": 144,
+        "implementations": [
+          {
+            "app": "website",
+            "id": "ich-score",
+            "file": "apps/website/private/tool-code/ich-score/calculator.js",
+            "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+          },
+          {
+            "app": "dashboard",
+            "id": "ich-score",
+            "file": "apps/dashboard/private/tool-code/ich-score/calculator.js",
+            "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+          },
+          {
+            "app": "command-center",
+            "id": "ich-score",
+            "file": "apps/command-center/private/tool-code/ich-score/calculator.js",
+            "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+          }
+        ],
+        "qualifications": [
+          "Exact integer weighted sum of 48 stored selected category/flag tuples for ich-score. Clinical item eligibility/administration, labels/rubrics, risk categories, prognosis, treatment and complete instrument conformance excluded. Clinical, professional translation and source rights approval not performed.",
+          "NIHSS UN handling, GBS exact25 lab boundary, SOFA source boundaries/dose rubrics, Barthel yard/meter and enema rubrics, Katz original1963A–G and clinical grades/probabilities are not approved by score tests. Separately owned field/source-edition patches must be reviewed and composed.",
+          "All862 historical fixtures and their tolerances remain byte-identical. Four inline samples are only a subset of this complete hashed bank.",
+          "Synthetic selected-category combinations may not be clinically admissible patient assessments. No professional/clinical/rights/full-method approval inferred."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+    },
+    "limits": "Estimativa de gravidade na apresentação de hemorragia intracerebral, associada à mortalidade em 30 dias na coorte original. Idade e volume são componentes do escore. O resumo não demonstra que uma pontuação isolada justifique decisão terapêutica ou prognóstico individual definitivo.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:03.020Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Técnica ABC/2 e seus erros em hematomas irregulares não foram conferidos no resumo.",
+        "Faixa etária integral e critérios de inclusão/exclusão não foram explicitados no resumo."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/ich-score/calculator.js",
+    "bytes": 4822,
+    "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "09ecf8d7c1d0cc68bf56f56d259f01d457b3952d1f3d53f9bd187f91220b71bc",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "977397a93b27774377ed662a6f8ddca17ccd284b4a307021f1133fa89c56a661",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "977397a93b27774377ed662a6f8ddca17ccd284b4a307021f1133fa89c56a661",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

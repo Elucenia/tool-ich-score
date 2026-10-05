@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field gcs",
+    "input": {
+      "vol": false,
+      "ivh": false,
+      "infra": false,
+      "idade": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "gcs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field gcs",
+    "input": {
+      "gcs": "",
+      "vol": false,
+      "ivh": false,
+      "infra": false,
+      "idade": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "gcs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option gcs",
+    "input": {
+      "gcs": "__ELUCENIA_INVALID_OPTION__",
+      "vol": false,
+      "ivh": false,
+      "infra": false,
+      "idade": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "gcs"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean vol",
+    "input": {
+      "gcs": "0",
+      "vol": "2",
+      "ivh": false,
+      "infra": false,
+      "idade": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vol"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean ivh",
+    "input": {
+      "gcs": "0",
+      "vol": false,
+      "ivh": "2",
+      "infra": false,
+      "idade": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "ivh"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean infra",
+    "input": {
+      "gcs": "0",
+      "vol": false,
+      "ivh": false,
+      "infra": "2",
+      "idade": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "infra"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean idade",
+    "input": {
+      "gcs": "0",
+      "vol": false,
+      "ivh": false,
+      "infra": false,
+      "idade": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

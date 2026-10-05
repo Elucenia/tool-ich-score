@@ -1,52 +1,121 @@
 [
   {
-    "label": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
-    "input": {
+    "id": "ich-score",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+    "originalInput": {
       "gcs": "0"
+    },
+    "input": {
+      "gcs": "0",
+      "vol": false,
+      "ivh": false,
+      "infra": false,
+      "idade": false
     },
     "expected": {
       "score": 0,
       "level": "low"
     },
-    "originalInput": {
-      "gcs": "0"
+    "recordedResult": {
+      "main": [
+        "0",
+        "de 6"
+      ],
+      "label": "ICH Score",
+      "raw": {
+        "score": 0
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
-    "input": {
+    "id": "ich-score",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+    "originalInput": {
       "gcs": "1",
       "ivh": true
+    },
+    "input": {
+      "gcs": "1",
+      "ivh": true,
+      "vol": false,
+      "infra": false,
+      "idade": false
     },
     "expected": {
       "score": 2,
       "level": "mid",
       "verdict": "26%"
     },
-    "originalInput": {
-      "gcs": "1",
-      "ivh": true
+    "recordedResult": {
+      "main": [
+        "2",
+        "de 6"
+      ],
+      "label": "ICH Score",
+      "raw": {
+        "score": 2
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
-    "input": {
+    "id": "ich-score",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+    "originalInput": {
       "gcs": "2",
       "vol": true,
       "ivh": true
+    },
+    "input": {
+      "gcs": "2",
+      "vol": true,
+      "ivh": true,
+      "infra": false,
+      "idade": false
     },
     "expected": {
       "score": 4,
       "level": "high",
       "verdict": "97%"
     },
-    "originalInput": {
-      "gcs": "2",
-      "vol": true,
-      "ivh": true
+    "recordedResult": {
+      "main": [
+        "4",
+        "de 6"
+      ],
+      "label": "ICH Score",
+      "raw": {
+        "score": 4
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
