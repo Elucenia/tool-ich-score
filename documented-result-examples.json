@@ -1,0 +1,387 @@
+{
+  "id": "ich-score",
+  "implementationVersion": "ich-score@native-2026-10-05+dd14b8b7f1b1",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalidade em 30 dias: 0%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalidade em 30 dias: 26%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalidade em 30 dias: 97%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30-day mortality: 0%",
+            "locale": "en",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30-day mortality: 26%",
+            "locale": "en",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30-day mortality: 97%",
+            "locale": "en",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalidad a 30 días: 0%",
+            "locale": "es",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalidad a 30 días: 26%",
+            "locale": "es",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalidad a 30 días: 97%",
+            "locale": "es",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalité à 30 jours : 0%",
+            "locale": "fr",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalité à 30 jours : 26%",
+            "locale": "fr",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalité à 30 jours : 97%",
+            "locale": "fr",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30-Tage-Mortalität: 0%",
+            "locale": "de",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30-Tage-Mortalität: 26%",
+            "locale": "de",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30-Tage-Mortalität: 97%",
+            "locale": "de",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalità a 30 giorni: 0%",
+            "locale": "it",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalità a 30 giorni: 26%",
+            "locale": "it",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mortalità a 30 giorni: 97%",
+            "locale": "it",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الوفيات خلال 30 يومًا: 0%",
+            "locale": "ar",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الوفيات خلال 30 يومًا: 26%",
+            "locale": "ar",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "الوفيات خلال 30 يومًا: 97%",
+            "locale": "ar",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30 天死亡率：0%",
+            "locale": "zh",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30 天死亡率：26%",
+            "locale": "zh",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30 天死亡率：97%",
+            "locale": "zh",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30日死亡率：0%",
+            "locale": "ja",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30日死亡率：26%",
+            "locale": "ja",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30日死亡率：97%",
+            "locale": "ja",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30 दिन की मृत्यु दर: 0%",
+            "locale": "hi",
+            "template": "documented-authored-043c2b347a81d86b4d94"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30 दिन की मृत्यु दर: 26%",
+            "locale": "hi",
+            "template": "documented-authored-600a6d16fd61cd86492c"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "30 दिन की मृत्यु दर: 97%",
+            "locale": "hi",
+            "template": "documented-authored-b7c8f7e3e574a402ab4e"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

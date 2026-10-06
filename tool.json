@@ -261,7 +261,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "ICH/Hemphill 2001:5 fatores, total 0–6; volume ABC/2; sem decisão terapêutica automática",
-    "implementationVersion": "ich-score@native-2026-10-03+0097007cc91e",
+    "implementationVersion": "ich-score@native-2026-10-05+dd14b8b7f1b1",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/11283388/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -500,7 +500,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+      "implementationHash": "dd14b8b7f1b132b05fce5c54509b38098d5a666ec75496efbe1b41f65276d626",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "ich-score@native-2026-10-03+0097007cc91e",
+          "previousImplementationHash": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff",
+          "implementationHash": "dd14b8b7f1b132b05fce5c54509b38098d5a666ec75496efbe1b41f65276d626",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "9210e09231e5ed20f3df4257683384ac70c59a5b5f2b6b18c481007facca1a04",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Estimativa de gravidade na apresentação de hemorragia intracerebral, associada à mortalidade em 30 dias na coorte original. Idade e volume são componentes do escore. O resumo não demonstra que uma pontuação isolada justifique decisão terapêutica ou prognóstico individual definitivo.",
     "sourceLimitEvidence": {
@@ -520,20 +548,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/ich-score/calculator.js",
-    "bytes": 4822,
-    "sha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff"
+    "bytes": 5027,
+    "sha256": "dd14b8b7f1b132b05fce5c54509b38098d5a666ec75496efbe1b41f65276d626"
   },
-  "sourceToolSha256": "09ecf8d7c1d0cc68bf56f56d259f01d457b3952d1f3d53f9bd187f91220b71bc",
+  "sourceToolSha256": "9af3ca6da223682eb986a78f862e046ca7d6771bc3a15af53a999b39b2fd9872",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "977397a93b27774377ed662a6f8ddca17ccd284b4a307021f1133fa89c56a661",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "977397a93b27774377ed662a6f8ddca17ccd284b4a307021f1133fa89c56a661",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

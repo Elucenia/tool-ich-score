@@ -1,0 +1,171 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "ich-score",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "e5f4c53d223318681ed4b5cfaeb793f669728921",
+    "oldEngineSha256": "0097007cc91eee65020c85a0f7ecd6427e8d828708676a9ee96071a93ab5c3ff",
+    "currentEngineSha256": "dd14b8b7f1b132b05fce5c54509b38098d5a666ec75496efbe1b41f65276d626"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Glasgow 15, hematoma pequeno supratentorial, 60 anos: 0 (0%)",
+      "input": {
+        "gcs": "0",
+        "vol": false,
+        "ivh": false,
+        "infra": false,
+        "idade": false
+      },
+      "publicOutput": {
+        "id": "ich-score",
+        "main": [
+          "0",
+          "de 6"
+        ],
+        "label": "ICH Score",
+        "raw": {
+          "score": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 0,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0",
+          "de 6"
+        ],
+        "label": "ICH Score",
+        "level": "low",
+        "verdict": "Mortalidade em 30 dias: 0%",
+        "note": "",
+        "raw": {
+          "score": 0
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Glasgow 10 com inundação ventricular: 2 pontos (26%)",
+      "input": {
+        "gcs": "1",
+        "ivh": true,
+        "vol": false,
+        "infra": false,
+        "idade": false
+      },
+      "publicOutput": {
+        "id": "ich-score",
+        "main": [
+          "2",
+          "de 6"
+        ],
+        "label": "ICH Score",
+        "raw": {
+          "score": 2
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 2,
+        "level": "mid",
+        "verdict": "26%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "2",
+          "de 6"
+        ],
+        "label": "ICH Score",
+        "level": "mid",
+        "verdict": "Mortalidade em 30 dias: 26%",
+        "note": "",
+        "raw": {
+          "score": 2
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Glasgow 4, 40 mL, inundação ventricular: 4 pontos (97%)",
+      "input": {
+        "gcs": "2",
+        "vol": true,
+        "ivh": true,
+        "infra": false,
+        "idade": false
+      },
+      "publicOutput": {
+        "id": "ich-score",
+        "main": [
+          "4",
+          "de 6"
+        ],
+        "label": "ICH Score",
+        "raw": {
+          "score": 4
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 4,
+        "level": "high",
+        "verdict": "97%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "4",
+          "de 6"
+        ],
+        "label": "ICH Score",
+        "level": "high",
+        "verdict": "Mortalidade em 30 dias: 97%",
+        "note": "",
+        "raw": {
+          "score": 4
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}
